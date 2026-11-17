@@ -1,0 +1,23 @@
+origen,destino,costo
+SE Alta Vista,SE Unare,12
+SE Alta Vista,SE Puerto Ordaz Centro,6
+SE Alta Vista,SE Castillito,9
+SE Alta Vista,SE Caroni,14
+SE Puerto Ordaz Centro,SE Villa Asia,8
+SE Puerto Ordaz Centro,SE Castillito,7
+SE Puerto Ordaz Centro,SE Los Olivos,13
+SE Unare,SE Los Olivos,10
+SE Unare,SE Matanzas Industrial,15
+SE Unare,SE Villa Asia,11
+SE Unare,SE Castillito,10
+SE Los Olivos,SE Matanzas Industrial,9
+SE Matanzas Industrial,SE Caroni,20
+SE Castillito,SE Core 8,5
+SE Core 8,SE Caroni,11
+SE Villa Asia,SE Core 8,9
+SE Caroni,SE San Felix,13
+SE Caroni,SE Chirica,16
+SE San Felix,SE Chirica,6
+SE San Felix,SE El Roble,8
+SE Chirica,SE El Roble,7
+SE Alta Vista,SE Villa Asia,10
