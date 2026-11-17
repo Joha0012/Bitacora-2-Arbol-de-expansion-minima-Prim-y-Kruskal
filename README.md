@@ -32,18 +32,40 @@ costo que conecta todas las subestaciones sin ciclos.
 ## Estructura del Repositorio
 
 ```
-mst-redes-electricas/
+Bitacora-2-Arbol-de-expansion-minima-Prim-y-Kruskal/
 ├── src/
-│   └── mst_algorithms.py     # Implementación de Prim, Kruskal y UnionFind
+│   ├── grafo.py              # Clase Grafo (lista de adyacencia)
+│   ├── union_find.py         # Union-Find (compresión de caminos + rango)
+│   ├── prim.py               # Algoritmo de Prim (min-heap)
+│   ├── kruskal.py            # Algoritmo de Kruskal (Union-Find)
+│   └── mst_algorithms.py     # Fachada + red eléctrica de ejemplo (demo)
 ├── tests/
-│   └── test_mst.py           # 10 pruebas (unitarias, Hypothesis, diferencial)
+│   ├── test_mst.py           # 10 pruebas (unitarias, Hypothesis, diferencial NetworkX)
+│   └── test_union_find.py    # 5 pruebas unitarias de Union-Find
 ├── experiments/
 │   ├── piloto.py             # Medición piloto y generación de gráficas
-│   ├── datos_piloto.csv      # Datos experimentales (generado al correr piloto.py)
-│   └── grafica_piloto.png    # Gráfica de rendimiento (generada al correr piloto.py)
+│   ├── datos_piloto.csv      # Datos experimentales
+│   └── grafica_piloto.png    # Gráfica de rendimiento
+├── docs/
+│   └── Equipo_5_Bitacora2.md # Informe (fuente del PDF)
 ├── requirements.txt
 └── README.md
 ```
+
+**Repositorio:** https://github.com/Joha0012/Bitacora-2-Arbol-de-expansion-minima-Prim-y-Kruskal
+
+## Resultados verificados
+
+- `pytest tests -v` → **15 pruebas pasan** (Python 3.13.17, pytest 9.2.0, hypothesis 6.170.15, networkx 3.7)
+- Red de ejemplo (8 subestaciones): MST = **23 k USD**, 7 aristas (Prim = Kruskal = NetworkX)
+
+| n | Prim (ms) | Kruskal (ms) |
+|---|---|---|
+| 50 | 0.076 | 0.148 |
+| 500 | 1.439 | 2.372 |
+| 5 000 | 27.876 | 59.924 |
+
+*(media de 5 repeticiones, semilla 42, densidad ≈ 3n aristas; datos completos en `experiments/datos_piloto.csv`)*
 
 ---
 
